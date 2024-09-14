@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Redirect</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // iPhoneの場合
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                window.location.href = "https://itunes.apple.com/jp/app/id1664339226"; // iPhoneのURL
+            }
+            // Androidの場合
+            else if (/Android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.satoru.oshi_katsu"; // AndroidのURL
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>リダイレクト中...</p>
+</body>
+</html>
